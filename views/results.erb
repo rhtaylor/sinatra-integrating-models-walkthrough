@@ -1,9 +1,15 @@
-<h1>Your Text Analysis</h1>
+<h1>Your Text Analysis</h1> 
 
-<h2>Number of Words: </h2>
+<%  a = @analyzed_text.count_of_words %>
+<h2>Number of Words: <%= "#{a}" %></h2> 
 
-<h2>Vowels: </h2>
+<% b = @analyzed_text.count_of_vowels %> 
+<h2>Vowels: <%="#{b}"%></h2>
+<% c = @analyzed_text.count_of_consonants %> 
+<h2>Consonants: <%="#{c}"%></h2>
 
-<h2>Consonants: </h2>
+<% aaa = @analyzed_text.most_used_letter %> 
+<% aaa.map do |key, value| %>
+<h2>Most Common Letter: <%= "#{key.upcase}," %> used <%= "#{value}" %> times</h2>
 
-<h2>Most Common Letter: _____ used _____ times</h2>
+<% end %>
