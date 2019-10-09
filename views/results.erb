@@ -10,6 +10,6 @@
 
 <% aaa = @analyzed_text.most_used_letter %> 
 <% aaa.map do |key, value| %>
-<h2>Most Common Letter: <%= "#{key}," %> used <%= "#{value}" %> times</h2>
+<h2>Most Common Letter: <%= "#{key.upcase}," %> used <%= "#{value}" %> times</h2>
 <% binding.pry %>
 <% end %>
